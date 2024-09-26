@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: url('https://res.cloudinary.com/dsezdaxqy/image/upload/v1727343253/background-pattern-desktop_bjjmw6.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.faq-container {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: hsl(240, 60%, 50%);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: white;
+    color: hsl(240, 60%, 40%);
+    padding: 10px;
+    border: 1px solid hsl(240, 60%, 80%);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+.plus {
+    display: block; /* Show plus icon by default */
+}
+
+.minus {
+    display: none; /* Hide minus icon by default */
+}
+
+.accordion-button[aria-expanded="true"] .plus {
+    display: none; /* Hide plus icon when expanded */
+}
+
+.accordion-button[aria-expanded="true"] .minus {
+    display: block; /* Show minus icon when expanded */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 10px;
+    background-color: hsl(240, 60%, 95%);
+    border-left: 2px solid hsl(240, 60%, 50%);
+    margin-top: 5px;
+}
+
+.accordion-content p {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: hsl(240, 20%, 40%);
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url('https://res.cloudinary.com/dsezdaxqy/image/upload/v1727343255/background-pattern-mobile_ycekzp.svg');
+    }
+}
